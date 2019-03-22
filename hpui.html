@@ -1,0 +1,56 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HPUI Feedback</title>
+<meta name="theme-color" content="#546E7A">
+<link rel="icon" href="/img/riohsc.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/img/riohsc.ico">
+<meta name="keywords" content="HPUI">
+<meta name="description" content="HPUI for hey plus">
+<meta name="viewport" content="width=device-width,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<link href="/css/mdui.min.css" rel="stylesheet">
+</head>
+<body>
+<!--Leancloud Operation library-->
+<script src="/js/av-min.js"></script>
+<!--Community Core code base-->
+<script src="/js/Rio.js"></script>
+<script src="/js/mdui.min.js"></script>
+<dir class="mdui-container">
+<div class="mdui-ripple">
+<i class="mdui-text-color-blue-grey-600 mdui-center mdui-icon material-icons"  style="padding-top:50px; padding-bottom:50px; font-size:150px">build</i>
+</div>
+<div class="mdui-typo-display-1 mdui-text-center">Welcome!</div>
+<p class="mdui-text-center">Today is <script language="javascript">
+var week; 
+if(new Date().getDay()==0)          week="Sunday"
+if(new Date().getDay()==1)          week="Monday"
+if(new Date().getDay()==2)          week="Tuesday" 
+if(new Date().getDay()==3)          week="Wednesday"
+if(new Date().getDay()==4)          week="Thursday"
+if(new Date().getDay()==5)          week="Friday"
+if(new Date().getDay()==6)          week="Saturday"
+document.write((new Date().getMonth()+1)+"-"+new Date().getDate()+" "+week);
+</script></p>
+<h1></h1>
+<div class="mdui-typo" style="padding-top:15px; padding-bottom:10px">
+  <hr/>
+</div>
+<div class="mdui-typo-subheading-opacity mdui-text-center" style="padding-bottom:20px">如果你有遇到问题, 请在下面填写你遇到的问题</div>
+<!--RioHsc Community core-->
+<div id="comment"></div>
+<script>
+    new Valine({
+        el:'#comment',
+        appId: 'YWUvhfmk4szedjp9rsMlrxUu-gzGzoHsz',
+        appKey: 'Wvd8drqRWfgy1Iam1hU8f3FI',
+        placeholder: '请务必填写用户名, 邮箱! 我们会对您的邮箱进行保密, 无用户名的反馈将会被删除.',
+        avatar: 'robohash'
+    });
+</script>
+</div>
+</body>
+</html>

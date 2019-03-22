@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Add Over the wall Profiles</title>
+<link rel="icon" href="/img/riohsc.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/img/riohsc.ico">
+<meta name="keywords" content="Over the wall, Profiles, SSR,V2ray">
+<meta name="description" content="SSR, V2ray profiles sharing">
+<link href="/vuesax.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<link href="/css/mdui.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/icon">
+<script src="/js/rtab.js"></script>
+    <script>
+        $(document).ready(function () {
+        $("#rio_2").hide();
+        $("#rio_3").hide();
+            $("#r1").click(function () {
+                $("#rio_1").show();
+                $("#rio_4").show();
+                $("#rio_2").hide();
+                $("#rio_3").hide();
+            });
+            $("#r2").click(function () {
+                $("#rio_1").hide();
+                $("#rio_3").hide();
+                $("#rio_4").hide();
+                $("#rio_2").show();
+            });
+            $("#r3").click(function () {
+                $("#rio_1").hide();
+                $("#rio_4").hide();
+                $("#rio_2").hide();
+                $("#rio_3").show();
+            });
+        });
+    </script>
+</head>
+<body>
+<script>
+function ssr(){
+    window.location.href='ssr://OTUuMjE2LjE2Mi42Nzo0ODgzMjphdXRoX2FlczEyOF9zaGExOmNoYWNoYTIwOnBsYWluOlptRnVaMlZ4YVdGdVp5NWpiMjAvP29iZnNwYXJhbT0mcHJvdG9wYXJhbT0mcmVtYXJrcz1SbWx1YkdGdVpBJmdyb3VwPVYyVnNZMjl0WlNCMGJ5QlVaV3hsWjNKaGJTQkFVbWx2WTI5dmJHRndhdw';
+}
+</script>
+<script>
+function download(){
+    window.location.href='/grssr.html';
+}
+</script>
+<script src="js/mdui.min.js"></script>
+<script src="vue.js"></script>
+<script src="vuesax.umd.js"></script>
+<script src="vuesax.umd.min.js"></script>
+<script src="vuesax.common.js"></script>
+<div id="iopos">
+<template>
+  <div class="mdui-shadow-3">
+    <vs-navbar v-model="activeItem" class="nabarx mdui-appbar-fixed" style="padding-top:10px; padding-bottom:10px" color="#ffffff">
+    <vs-tooltip text="Updated time" position="right" >
+      <vs-button color="#00897B" type="flat" radius="50%" @click="$vs.notify({title:'Update',text:'Updated on Oct. 28th',color:'#81C784'})"><i class="mdui-icon mdui-icon-left material-icons" style="font-size:25px">file_upload</i></vs-button>
+    </vs-tooltip>
+      <vs-navbar-title class="mdui-color-">
+        SSR Profiles
+      </vs-navbar-title>
+
+      <vs-spacer></vs-spacer>
+
+      <vs-navbar-item index="0">
+        <vs-button type="line" color="#388E3C" id="r1"><i class="mdui-icon mdui-icon-left material-icons" style="font-size:25px">airplanemode_active</i></vs-button>
+      </vs-navbar-item>
+      <vs-navbar-item index="1">
+        <vs-button type="line" color="#7B1FA2" id="r2"><i class="mdui-icon mdui-icon-left material-icons" style="font-size:25px">queue_music</i></vs-button>
+      </vs-navbar-item>
+      <vs-navbar-item index="2">
+        <vs-button type="line" color="#FFA000" id="r3"><i class="mdui-icon mdui-icon-left material-icons" style="font-size:25px">nature_people</i></vs-button>
+      </vs-navbar-item>
+    </vs-navbar>
+  </div>
+</template>
+<script>
+export default {
+  data:()=>({
+    activeItem: 0
+  })
+}
+</script>
+</div>
+<div style="padding-bottom:50px; padding-top:50px">
+        <div id="rio_1">
+            <div class="mdui-container">
+            <div class="mdui-ripple">
+<img class="mdui-center" src="img/ssr1.png" alt="">
+</div>
+<div id="iopos_min">
+            <vs-row vs-justify="center" class="mdui-container">
+  <vs-col type="flex" vs-justify="center" vs-align="center">
+    <vs-card>
+      <div slot="header">
+        <h3>
+          Add and Download
+        </h3>
+      </div>
+      <div>
+      <h1></h1>
+      <vs-button class="mdui-col-xs-12 mdui-ripple mdui-ripple-white" color="#00C853" onclick="download()">Download the Green SSR</vs-button>
+<vs-button class="mdui-col-xs-12 mdui-ripple mdui-ripple-white" color="#4caf50" onclick="ssr()" style="padding-top:15px">Finland</vs-button>
+<h1></h1>
+<div style="padding-top:50px">
+<vs-collapse :type="shadow">
+     <vs-collapse-item>
+       <div slot="header">
+         <strong>Copy</strong>
+       </div>
+       <div class="mdui-typo">
+  <pre>ssr://OTUuMjE2LjE2Mi42Nzo0ODgzMjphdXRoX2FlczEyOF9zaGExOmNoYWNoYTIwOnBsYWluOlptRnVaMlZ4YVdGdVp5NWpiMjAvP29iZnNwYXJhbT0mcHJvdG9wYXJhbT0mcmVtYXJrcz1SbWx1YkdGdVpBJmdyb3VwPVYyVnNZMjl0WlNCMGJ5QlVaV3hsWjNKaGJTQkFVbWx2WTI5dmJHRndhdw</pre>
+</div>
+</vs-collapse-item>
+    </vs-collapse>
+      </div>
+      <div slot="footer">
+        <vs-row vs-justify="flex-end">
+        <vs-button radius color="#4caf50" type="filled"><i class="mdui-icon mdui-icon-left material-icons">flight_takeoff</i></vs-button>
+        </vs-row>
+        </div>
+    </vs-card>
+  </vs-col>
+</vs-row>
+</div>
+
+        </div>
+        <div id="rio_4">
+        <div style="padding-top:15px">
+<!--RioHsc Community core-->
+<div id="comment"></div>
+<!--Leancloud Operation library-->
+<script src="/js/av-min.js"></script>
+<!--Community Core code base-->
+<script src="/js/Rio.js"></script>
+<script>
+    new Valine({
+        el:'#comment',
+        appId: 'YWUvhfmk4szedjp9rsMlrxUu-gzGzoHsz',
+        appKey: 'Wvd8drqRWfgy1Iam1hU8f3FI',
+        placeholder: ' ',
+        avatar: 'mp',
+        lang: 'en'
+    });
+</script>
+</div>
+</div>
+        <div id="rio_2">
+        <div id="rio2">
+            
+</div>
+        </div>
+        <div id="rio_3">
+            <p>rio</p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script>
+new Vue({
+el: '#iopos_min'
+})
+</script>
+<script>
+new Vue({
+el: '#iopos'
+})
+</script>
+<script>
+new Vue({
+el: '#rio2'
+})
+</script>
+</body>
+</html>

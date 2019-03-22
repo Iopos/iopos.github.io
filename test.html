@@ -1,0 +1,196 @@
+<html lang="zh"><head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>js toast消息提示通知插件spop.js</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/htmleaf-demo.css">
+	<link href="/dist/spop.min.css" rel="stylesheet">
+    	<link href="/src/styles.min.css" rel="stylesheet">
+</head>
+<body id="body">
+	<div class="htmleaf-container">
+		
+		<div class="container">
+      <nav class="menu"><a href="#demo-basic">Basic</a><a href="#demo-position">Position</a><a href="#demo-autoclose">Autoclose</a><a href="#demo-groups">Groups</a><a href="#demo-callbacks">Callbacks</a><a href="#demo-event">Event</a><a href="#demo-defaults">Defaults</a><a href="#demo-options">Options</a></nav>
+      <header class="header">
+        <h1 class="header-title">SmallPop</h1>
+      </header>
+      <section id="demo-basic" class="section">
+        <div class="text-main">
+          <div class="titles">
+            <h2 class="title">Basic</h2>
+          </div>
+          <p><small>Tip: to remove all SmallPop's click the title.</small></p>
+          <p>Include <code>spop.js</code> and <code>spop.css</code> in your page,</p>
+        </div>
+        <div class="text-code">
+          <pre class=" language-markup"><code id="code-markup" class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation"><</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>spop.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true"><!-- Even better, SamallPop is made with scss,
+     @import to your style.scss --></span>
+<span class="token script language-javascript"><span class="token tag"><span class="token tag"><span class="token punctuation"><</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>spop.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation"></</span>script</span><span class="token punctuation">></span></span></span></code></pre>
+        </div>
+      </section>
+      <section class="section">
+        <div class="text-main">
+          <p>and call it:</p><a id="btn-default-pop" class="btn btn-block">Default pop</a><a id="btn-success-pop" class="btn btn-block">Success pop</a><a id="btn-warning-pop" class="btn btn-block">Warning pop</a><a id="btn-error-pop" class="btn btn-block">Error pop</a>
+        </div>
+        <div class="text-code">
+          <pre class=" language-javascript"><code id="code-basic" class=" language-javascript"><span class="token function">spop</span><span class="token punctuation">(</span><span class="token string">'Default SmallPop'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">spop</span><span class="token punctuation">(</span><span class="token string">'<h4 class="spop-title">Success</h4>Iˈm a success SmallPop'</span><span class="token punctuation">,</span> <span class="token string">'success'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">spop</span><span class="token punctuation">(</span><span class="token string">'Warning SmallPop'</span><span class="token punctuation">,</span> <span class="token string">'warning'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">spop</span><span class="token punctuation">(</span><span class="token string">'<strong>Error Here!</strong>'</span><span class="token punctuation">,</span> <span class="token string">'error'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+        </div>
+      </section>
+      <section id="demo-position" class="section">
+        <div class="text-main">
+          <div class="titles">
+            <h2 class="title">Position</h2>
+          </div>
+          <p>SmallPox has six differents positions:</p>
+          <div class="btn-group"><a id="btn-top-left" class="btn">Top left</a><a id="btn-top-center" class="btn">Top center</a><a id="btn-top-right" class="btn">Top right</a></div>
+          <div class="btn-group"><a id="btn-bottom-left" class="btn">Bottom left</a><a id="btn-bottom-center" class="btn">Bottom center</a><a id="btn-bottom-right" class="btn">Bottom right</a></div>
+          <p>In <em>mobile</em> (max-width:30em), all go down.</p>
+        </div>
+        <div class="text-code">
+          <pre class=" language-javascript"><code id="code-position" class=" language-javascript"><span class="token comment" spellcheck="true">// top left example</span>
+<span class="token function">spop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	template<span class="token punctuation">:</span> <span class="token string">'Position top left'</span><span class="token punctuation">,</span>
+	position  <span class="token punctuation">:</span> <span class="token string">'top-left'</span><span class="token punctuation">,</span>
+	style<span class="token punctuation">:</span> <span class="token string">'success'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>'</code></pre>
+        </div>
+      </section>
+      <section id="demo-autoclose" class="section">
+        <div class="text-main">
+          <div class="titles">
+            <h2 class="title">Autoclose</h2>
+          </div>
+          <p>Autoclose, to... close... automatically... <small>Woohoo never done before</small></p><a id="btn-autoclose-pop" class="btn btn-block">Autoclose</a>
+        </div>
+        <div class="text-code">
+          <pre class=" language-javascript"><code id="code-autoclose-pop" class=" language-javascript"><span class="token function">spop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	template<span class="token punctuation">:</span> <span class="token string">'3 seconds autoclose'</span><span class="token punctuation">,</span>
+	autoclose<span class="token punctuation">:</span> <span class="token number">3000</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+        </div>
+      </section>
+      <section id="demo-groups" class="section">
+        <div class="text-main">
+          <div class="titles">
+            <h2 class="title">Groups</h2>
+          </div>
+          <p>There can only be one SmallPop from each group</p><a id="btn-groups-1" class="btn btn-block">Group</a><a id="btn-groups" class="btn btn-block">No group</a><a id="btn-groups-2" class="btn btn-block">Group</a>
+        </div>
+        <div class="text-code">
+          <pre class=" language-javascript"><code id="code-groups" class=" language-javascript"><span class="token function">spop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	template<span class="token punctuation">:</span> <span class="token string">'All fields are required!'</span><span class="token punctuation">,</span>
+	group<span class="token punctuation">:</span> <span class="token string">'submit-satus'</span><span class="token punctuation">,</span>
+	style<span class="token punctuation">:</span> <span class="token string">'error'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">spop</span><span class="token punctuation">(</span><span class="token string">'Nothing here...'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">spop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	template<span class="token punctuation">:</span> <span class="token string">'Your information has been submitted'</span><span class="token punctuation">,</span>
+	group<span class="token punctuation">:</span> <span class="token string">'submit-satus'</span><span class="token punctuation">,</span>
+	style<span class="token punctuation">:</span> <span class="token string">'success'</span>
+	autoclose<span class="token punctuation">:</span> <span class="token number">2000</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+        </div>
+      </section>
+      <section id="demo-callbacks" class="section">
+        <div class="text-main">
+          <div class="titles">
+            <h2 class="title">Callbacks</h2>
+          </div>
+          <p>Do what you need onOpen and onClose</p><a id="btn-callbacks" class="btn btn-block">Callbacks</a>
+        </div>
+        <div class="text-code">
+          <pre class=" language-javascript"><code id="code-callbacks" class=" language-javascript"><span class="token function">spop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	template<span class="token punctuation">:</span> <span class="token string">'Please, close me.'</span><span class="token punctuation">,</span>
+	style<span class="token punctuation">:</span><span class="token string">'warning'</span><span class="token punctuation">,</span>
+	onOpen<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>style<span class="token punctuation">.</span>background <span class="token operator">=</span> <span class="token string">"#fff"</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	onClose<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>style<span class="token punctuation">.</span>background <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+		<span class="token function">spop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+			template<span class="token punctuation">:</span> <span class="token string">'Thank you!'</span><span class="token punctuation">,</span>
+			style<span class="token punctuation">:</span> <span class="token string">'success'</span><span class="token punctuation">,</span>
+			autoclose<span class="token punctuation">:</span> <span class="token number">2000</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+        </div>
+      </section>
+      <section id="demo-event" class="section">
+        <div class="text-main">
+          <div class="titles">
+            <h2 class="title">Event</h2>
+          </div>
+          <p>In your template you can call the close event, just add <em>data-spop="close"</em></p><a id="btn-event" class="btn btn-block">Launch</a>
+        </div>
+        <div class="text-code">
+          <pre class=" language-javascript"><code id="code-event" class=" language-javascript"><span class="token function">spop</span><span class="token punctuation">(</span><span class="token string">'Got to <a href="#demo-defaults" data-spop="close">defaults</a>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+        </div>
+      </section>
+      <section id="demo-defaults" class="section">
+        <div class="text-main">
+          <div class="titles">
+            <h2 class="title">Change Defaults</h2>
+          </div>
+          <p>Change the default options of all SmallPop's</p><a id="btn-defaults" class="btn btn-block">Changed all defaults</a><a id="btn-defaults-reset" class="btn btn-block">Restore defaults</a>
+        </div>
+        <div class="text-code">
+          <pre class=" language-javascript"><code id="code-defaults" class=" language-javascript">spop<span class="token punctuation">.</span>defaults <span class="token operator">=</span> <span class="token punctuation">{</span>
+	style     <span class="token punctuation">:</span> <span class="token string">'error'</span><span class="token punctuation">,</span>
+	autoclose <span class="token punctuation">:</span> <span class="token number">5000</span><span class="token punctuation">,</span>
+	position  <span class="token punctuation">:</span> <span class="token string">'top-left'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">spop</span><span class="token punctuation">(</span><span class="token string">'Defaults changed! See the others examples.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+        </div>
+      </section>
+      <section id="demo-options" class="section-full">
+        <div class="section">
+          <div class="text-main-full">
+            <div class="titles">
+              <h2 class="title">Options</h2>
+            </div>
+          </div>
+          <div class="text-code"></div>
+        </div>
+        <div class="text-code-full">
+          <pre class=" language-javascript"><code id="code-options" class=" language-javascript"><span class="token function">spop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	template  <span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">// string required. Without it nothing happens!</span>
+	style     <span class="token punctuation">:</span> <span class="token string">'info'</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">// error or success</span>
+	autoclose <span class="token punctuation">:</span> <span class="token keyword">false</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">// miliseconds</span>
+	position  <span class="token punctuation">:</span> <span class="token string">'top-right'</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">// top-left top-center bottom-left bottom-center bottom-right</span>
+	icon      <span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">// or false</span>
+	group     <span class="token punctuation">:</span> <span class="token keyword">false</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">// string, add a id reference </span>
+	onOpen    <span class="token punctuation">:</span> <span class="token function">funtion</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+	onClose   <span class="token punctuation">:</span> <span class="token function">funtion</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+        </div>
+      </section>
+      <footer class="footer">
+        <p><span class="h3">浏览器支持</span><br>Chrome, Firefox, IE 11-10-9 <small>(9 没有动画效果)</small>,
+          Android Browser, Chrome for Android, Safari, iOS Safari
+        </p>
+        <p><small>Created by Sílvio Rosa o Follow me on <a href="https://twitter.com/silvior_" target="_blank">twitter </a> for updates.</small></p>
+      </footer>
+      </div><a href="#body" class="btn btn-go-top">Go top</a>
+		
+	</div>
+	
+	<script src="/src/prism.js"></script>
+    <script src="/dist/spop.min.js"></script>
+    <script src="/src/scripts.min.js"></script>
+
+</body></html>
