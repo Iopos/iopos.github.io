@@ -67,7 +67,7 @@ const dp = new DPlayer({
     container: document.getElementById('sswz'),
     screenshot: true,
     video: {
-        url: 'http://qvod2.vzan.cc/628390/131986098950328630/replay.1554285483.45148355.m3u8?time=636899803808419774',
+        url: 'https://riohsc.coding.me/apk/sswz.mp4',
         pic: 'https://riohsc.coding.me/apk/Nulliop.png',
         thumbnails: 'https://riohsc.coding.me/apk/Nulliop.png'
     }
