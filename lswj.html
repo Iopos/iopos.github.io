@@ -1,0 +1,76 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>全民赛</title>
+<meta name="theme-color" content="#4CAF50">
+<meta name="viewport" content="width=device-width,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<link href="css/mdui.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/APlayer.min.css" class="aplayer-style-marker">
+<script src="js/APlayer.min.js" class="aplayer-script-marker"></script>
+<link rel="stylesheet" href="css/DPlayer.min.css">
+<script src="js/DPlayer.min.js"></script>
+</head>
+<body class="mdui-theme-primary-green mdui-theme-accent-green">
+<script src="js/mdui.min.js"></script>
+<div class="mdui-color-green" style="position:absolute; width:100vw; height:200px">
+<div class="mdui-container" style="padding-top:76px; padding-bottom:80px">
+<div class="mdui-shadow-6 mdui-color-white">
+<div class="mdui-container">
+<h1></h1>
+<div class="mdui-typo-display-1 mdui-text-center mdui-text-color-green" style="padding-top:50px">艺术节表演学习</div>
+<div class="mdui-typo mdui-text-center"><p>This page is powered by <a class="mdui-text-color-green-700" href="https://riohsc.coding.me">RioHsc</a></p></div>
+<h1></h1>
+<div class="mdui-typo" style="padding-top:15px; padding-bottom:10px">
+  <hr/>
+</div>
+<div class="mdui-typo-subheading-opacity mdui-text-center" style="padding-bottom:20px">视频</div>
+<h1></h1>
+<div id="qms"></div>
+<h1></h1>
+<div class="mdui-typo" style="padding-top:15px; padding-bottom:10px">
+  <hr/>
+</div>
+<div class="mdui-typo-subheading-opacity mdui-text-center" style="padding-bottom:20px">MP3</div>
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-wrjohicD"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "盛世舞姿",
+              author: "1707",
+              url: "https://riohsc.coding.me/apk/sswz.mp3",
+              pic: "https://riohsc.coding.me/apk/Nulliop.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<div class="mdui-typo" style="padding-top:15px; padding-bottom:10px">
+  <hr/>
+</div>
+<h1></h1>
+</div>
+</div>
+</div>
+</div>
+<script>
+const dp = new DPlayer({
+    container: document.getElementById('qms'),
+    screenshot: true,
+    video: {
+        url: 'https://pull.cc.netease.com/pushstation/52f2f22eb785181806c1199621242.flv?wsSecret=c066b1737e77c425eb1689a95031739a&wsTime=5f40c75e',
+        pic: 'https://riohsc.coding.me/apk/Nulliop.png',
+        thumbnails: 'https://riohsc.coding.me/apk/Nulliop.png'
+    }
+});
+</script>
+</body>
+</html>
